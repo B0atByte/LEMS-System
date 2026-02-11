@@ -1,0 +1,159 @@
+================================================================================
+📝 PROMPT สำหรับ CLAUDE CODE รอบหน้า
+================================================================================
+
+คัดลอก prompt ด้านล่างนี้ไปใช้ในรอบหน้า:
+
+================================================================================
+
+สวัสดีครับ! ผมกำลังพัฒนาต่อจากโปรเจค LEMS (Legal Enforcement Management System Bargainpoint) ที่เริ่มไว้แล้ว
+
+โปรเจคอยู่ที่: C:\xampp\htdocs\LEMS
+
+## ✅ สิ่งที่เสร็จแล้ว:
+
+1. **Database & Schema**
+   - SQL Schema สมบูรณ์ (7 ตาราง)
+   - Default users (4 roles)
+   - ER Diagram
+
+2. **Core Framework (MVC)**
+   - Router, Request, Response, Session
+   - Database (PDO Singleton)
+   - BaseModel (CRUD operations)
+
+3. **Security & Helpers**
+   - SecurityHelper (CSRF, Password, XSS)
+   - ValidationHelper
+   - DateHelper
+   - FileHelper
+   - UrlHelper
+
+4. **Authentication System**
+   - Login/Logout (ใช้งานได้แล้ว ✅)
+   - Session Management
+   - Role-Based Access Control
+   - Change Password
+
+5. **Controllers (พร้อมใช้งาน)**
+   - AuthController ✅
+   - DashboardController ✅
+   - UserController (เสร็จ 80%)
+   - LogController ✅
+   - CaseController (Placeholder)
+   - AssignmentController (Placeholder)
+   - FieldReportController (Placeholder)
+   - ExportController (Placeholder)
+
+6. **Models**
+   - User ✅
+   - LoginLog ✅
+   - ActivityLog ✅
+   - (Cases, Assignment, FieldReport ยังไม่มี)
+
+7. **Views**
+   - Login Page ✅
+   - Dashboard (4 roles) ✅
+   - Users List ✅
+   - Login Logs ✅
+   - Activity Logs ✅
+
+## ⏳ สิ่งที่ต้องทำต่อ (เรียงตามลำดับความสำคัญ):
+
+1. **User Management (CRUD ครบ)**
+   - สร้าง views/users/create.php
+   - สร้าง views/users/edit.php
+   - สร้าง views/users/view.php
+   - เชื่อม UserController ให้ทำงานครบ
+
+2. **Case Management Module**
+   - สร้าง Cases Model
+   - พัฒนา CaseController แบบเต็มรูปแบบ
+   - สร้าง Views ทั้งหมด (index, create, edit, view)
+   - Pagination และ Search
+
+3. **Assignment Module**
+   - สร้าง Assignment Model
+   - พัฒนา AssignmentController
+   - มอบหมายงานให้เจ้าหน้าที่
+   - Views ทั้งหมด
+
+4. **Field Report Module (GPS + Upload รูป)**
+   - สร้าง FieldReport และ ReportImage Models
+   - พัฒนา FieldReportController
+   - ฟอร์มรายงานภาคสนาม
+   - Upload รูปหลายรูป
+   - JavaScript GPS Location
+   - การอนุมัติรายงาน
+
+5. **Log Viewer (UI ที่สมบูรณ์)**
+   - ปรับปรุง login_logs.php
+   - ปรับปรุง activity_logs.php
+   - สร้าง audit_trail.php (เปรียบเทียบ old_data vs new_data)
+   - Filter และ Search
+
+6. **Export Module (Excel & Word)**
+   - ใช้ PHPSpreadsheet สำหรับ Excel
+   - ใช้ PHPWord สำหรับ Word
+   - Export รายงานต่างๆ
+   - Template สำหรับรายงาน
+
+7. **Dashboard ที่สมบูรณ์**
+   - แสดงสถิติจริง (ไม่ใช่ placeholder)
+   - Charts/Graphs
+   - Recent Activities
+   - แยก content ตาม Role
+
+8. **Middleware แบบเต็มรูปแบบ**
+   - AuthMiddleware
+   - RoleMiddleware
+   - CsrfMiddleware
+
+## 🎯 ข้อมูลเทคนิค:
+
+- **Path:** C:\xampp\htdocs\LEMS
+- **Database:** lems_db
+- **Default Login:** superadmin / Admin@123
+- **PHP Version:** 8.2+
+- **Framework:** Custom MVC
+- **Frontend:** Bootstrap 5
+- **Package Manager:** Composer
+
+## 📂 โครงสร้างโปรเจค:
+
+```
+LEMS/
+├── app/
+│   ├── Controllers/
+│   ├── Models/
+│   ├── Middleware/
+│   └── Helpers/
+├── config/
+├── core/
+├── database/
+├── public/ (entry point)
+├── views/
+├── storage/
+└── vendor/
+```
+
+## 🎯 งานที่อยากให้ทำในรอบนี้:
+
+[เติมงานที่ต้องการให้ทำ เช่น:]
+- ต้องการทำ User Management CRUD ให้สมบูรณ์
+- ต้องการสร้าง Case Management Module
+- ต้องการพัฒนา Field Report System
+- หรืออื่นๆ ตามต้องการ
+
+================================================================================
+
+ช่วยทำต่อจากที่เหลือไว้ให้หน่อยครับ โดยเน้น:
+1. Code Quality (PSR-12, Security)
+2. Enterprise Grade
+3. รองรับ 100,000+ records
+4. Responsive Design
+5. User Experience ที่ดี
+
+เริ่มได้เลยครับ!
+
+================================================================================

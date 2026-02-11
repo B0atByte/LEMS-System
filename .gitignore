@@ -1,0 +1,62 @@
+# ========================================
+# LEMS .gitignore
+# ========================================
+
+# Environment
+.env
+.env.backup
+.env.local
+
+# Dependencies
+/vendor/
+composer.lock
+
+# Storage
+/storage/logs/*
+!/storage/logs/.gitkeep
+/storage/cache/*
+!/storage/cache/.gitkeep
+
+# Uploads
+/public/uploads/*
+!/public/uploads/.gitkeep
+!/public/uploads/field_reports/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.phpstorm.meta.php
+_ide_helper.php
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+/tests/coverage/
+.phpunit.result.cache
+
+# Build
+/dist/
+/build/

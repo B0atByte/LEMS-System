@@ -1,0 +1,24 @@
+# ========================================
+# LEMS - Root .htaccess
+# Redirect all requests to public/ folder
+# ========================================
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /LEMS/
+
+    # Redirect to public folder if not already there
+    RewriteCond %{REQUEST_URI} !^/LEMS/public/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+# Deny access to sensitive files
+<FilesMatch "^(\.env|\.gitignore|composer\.json|composer\.lock)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Deny access to directories
+Options -Indexes

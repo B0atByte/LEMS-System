@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(composer dump-autoload:*)",
+      "Bash(if [ -f .env ])",
+      "Bash(then echo \".env exists\")",
+      "Bash(else echo \".env not found - copying from .env.example\")",
+      "Bash(fi)"
+    ]
+  }
+}
