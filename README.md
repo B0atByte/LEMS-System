@@ -281,8 +281,7 @@ composer dump-autoload
 
 สำหรับคำถามหรือปัญหาในการใช้งาน กรุณาติดต่อ:
 
-- **Email:** support@bargainpoint.com
-- **GitHub Issues:** [Repository Issues](https://github.com/bargainpoint/lems/issues)
+Email: boatzaha2905@gmail.com
 
 ---
 
